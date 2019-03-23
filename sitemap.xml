@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://codespecific.github.io/tags/index.html</loc>
+    
+    <lastmod>2019-03-23T12:12:07.946Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://codespecific.github.io/2019/03/23/%E9%9A%8F%E6%9C%BA%E8%8E%B7%E5%8F%96%E6%8C%87%E5%AE%9A%E8%8C%83%E5%9B%B4%E5%86%85N%E4%B8%AA%E4%B8%8D%E9%87%8D%E5%A4%8D%E6%95%B0%E5%AD%97/</loc>
     
     <lastmod>2019-03-23T07:52:19.115Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>http://codespecific.github.io/about/index.html</loc>
     
     <lastmod>2019-03-23T06:17:43.747Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://codespecific.github.io/tags/index.html</loc>
-    
-    <lastmod>2019-03-23T06:13:10.552Z</lastmod>
     
   </url>
   
