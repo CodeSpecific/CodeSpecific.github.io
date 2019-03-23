@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://codespecific.github.io/books/index.html</loc>
+    
+    <lastmod>2019-03-23T06:56:43.404Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://codespecific.github.io/repository/index.html</loc>
+    
+    <lastmod>2019-03-23T06:56:17.146Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://codespecific.github.io/about/index.html</loc>
+    
+    <lastmod>2019-03-23T06:17:43.747Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://codespecific.github.io/links/index.html</loc>
+    
+    <lastmod>2019-03-23T06:16:51.653Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://codespecific.github.io/tags/index.html</loc>
     
-    <lastmod>2019-03-23T06:12:20.881Z</lastmod>
+    <lastmod>2019-03-23T06:13:10.552Z</lastmod>
     
   </url>
   
