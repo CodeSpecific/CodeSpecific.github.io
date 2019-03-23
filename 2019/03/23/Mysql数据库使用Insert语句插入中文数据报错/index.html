@@ -27,7 +27,7 @@
 <meta property="og:description" content="Mysql数据库使用Insert语句插入中文数据报错">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://github.com/CodeSpecific/GraphBed/raw/master/2019/03/23/2887109953-5c1e211113c7c_articlex.png">
-<meta property="og:updated_time" content="2019-03-23T03:26:34.499Z">
+<meta property="og:updated_time" content="2019-03-23T07:49:00.004Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mysql数据库使用Insert语句插入中文数据报错">
 <meta name="twitter:description" content="Mysql数据库使用Insert语句插入中文数据报错">
@@ -217,7 +217,7 @@
   <div class="widget">
     <h3 class="widget-title">Categories</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -227,7 +227,7 @@
   <div class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-body">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Error/">Error</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Error/">Error</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随机数/">随机数</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -237,7 +237,7 @@
   <div class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/Error/" style="font-size: 13px;">Error</a>
+      <a href="/tags/Error/" style="font-size: 13px;">Error</a> <a href="/tags/随机数/" style="font-size: 13px;">随机数</a>
     </div>
   </div>
 
@@ -246,7 +246,7 @@
   <div class="widget">
     <h3 class="widget-title">Archive</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -258,6 +258,21 @@
     <div class="widget-body">
       <ul class="recent-post-list list-unstyled no-thumbnail">
         
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/算法/">算法</a>
+              </p>
+              <p class="item-title">
+                <a href="/2019/03/23/随机获取指定范围内N个不重复数字/" class="title">随机获取指定范围内N个不重复数字</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-03-23T07:47:00.000Z" itemprop="datePublished">2019-03-23</time>
+              </p>
+            </div>
+          </li>
+          
           <li>
             
             <div class="item-inner">
@@ -326,8 +341,8 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>在mysql的命令行模式中，通过insert语句插入中文数据的时候报错，类似于下面这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Incorrect string value: &apos;\xE7\x8F&apos; for column &apos;name&apos; at row 1</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
+        <a id="more"></a>
+<p>在mysql的命令行模式中，通过insert语句插入中文数据的时候报错，类似于下面这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Incorrect string value: &apos;\xE7\x8F&apos; for column &apos;name&apos; at row 1</span><br></pre></td></tr></table></figure></p>
 <p>造成这个错误通常是由于创建数据表的时候使用了不正确的编码格式,可以使用如下命令查看操作的目标数据表的编码格式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW CREATE TABLE 表名；</span><br></pre></td></tr></table></figure></p>
 <p>通过结果就可以看到目标表的目标字段对应的编码格式，我们只需要把该列的编码格式转化为<code>utf8</code>即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE 表名 MODIFY 列名 数据类型 CHARACTER SET utf8 非空约束</span><br><span class="line"></span><br><span class="line">例如：ALTER TABLE student MODIFY name VARCHAR(20) CHARACTER SET utf8 NOT NULL</span><br></pre></td></tr></table></figure></p>
 <p>当然这只是一个临时的解决办法，更近一步的解决办法是修改数据表的编码，防止以后在使用命令添加数据列的时候，使用的仍是数据表的编码。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE 表名 DEFAULT CHARSET utf8;</span><br></pre></td></tr></table></figure></p>
@@ -389,6 +404,16 @@
 
   <nav class="bar bar-footer clearfix" data-stick-bottom>
   <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2019/03/23/随机获取指定范围内N个不重复数字/" title="随机获取指定范围内N个不重复数字"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+    </li>
+    
+    
+    
+  </ul>
   
   
   <!-- Button trigger modal -->
