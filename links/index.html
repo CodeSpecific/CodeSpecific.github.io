@@ -23,7 +23,7 @@
 <meta property="og:url" content="http://codespecific.github.io/links/index.html">
 <meta property="og:site_name" content="Vitamin Blogs">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-23T06:58:43.120Z">
+<meta property="og:updated_time" content="2019-03-23T07:36:16.435Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Links">
   <!-- Canonical links -->
@@ -293,14 +293,14 @@
             <div class="panel panel-default hover-shadow hover-grow">
               <figure class="media media-middle">
                 <div class="media-left pr-no">
-                  <a href="http://www.baidu.com" target="_blank" class="img-burn thumb-md media-middle">
-                    <img src="https://www.baidu.com/img/bd_logo1.png?where=super" class="w-full" alt>
+                  <a href="http://www.github.com" target="_blank" class="img-burn thumb-md media-middle">
+                    <img src class="w-full" alt>
                   </a>
                 </div>
                 <div class="media-body p-0x">
-                  <h4 class="media-heading"><a href="http://www.baidu.com" target="_blank"><span class="text-dark">百度</span></a></h4>
+                  <h4 class="media-heading"><a href="http://www.github.com" target="_blank"><span class="text-dark">Github</span></a></h4>
                   <div class="text-muted">
-                    搜索引擎
+                    全球最大的代码托管平台
                   </div>
                 </div>
               </figure>
@@ -312,6 +312,12 @@
 </article>
 
   
+  <section id="comments">
+  	
+           
+    
+  </section>
+
 
 
 
@@ -362,6 +368,27 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+
+   
+    
+  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: 'c5cdec797a60b4181f83',
+    clientSecret: 'e4d5601d8048858092177d6faa07349a26239923',
+    repo: 'gitalk-comments',
+    owner: 'CodeSpecific',
+    admin: ['CodeSpecific'],
+    id: md5(location.pathname),
+    distractionFreeMode: true
+  })
+  gitalk.render('comments')
+  </script>
+
+      
 
 
 
